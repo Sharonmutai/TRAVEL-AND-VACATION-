@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker Example</title>
+</head>
+<body>
+
+<div class="datepicker-container">
+    <input style="width:100%;" type="date" id="datepicker2" name="type" placeholder="Check In Date" required>
+</div>
+
+<script>
+    // Get the current date in the format YYYY-MM-DD
+    function getCurrentDate() {
+        const today = new Date();
+        const year = today.getFullYear();
+        let month = today.getMonth() + 1;
+        let day = today.getDate();
+
+        // Pad single-digit month and day with a leading zero
+        month = month < 10 ? '0' + month : month;
+        day = day < 10 ? '0' + day : day;
+
+        return `${year}-${month}-${day}`;
+    }
+
+    // Set the minimum date for the date input field to the current date
+    document.getElementById('datepicker2').setAttribute('min', getCurrentDate());
+</script>
+
+</body>
+</html>

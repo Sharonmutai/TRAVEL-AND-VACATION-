@@ -1,0 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['USER_DATA']))
+{
+    unset($_SESSION['USER_DATA']);
+    header('location:index.php');
+}
+//session_destroy();
+//header('location:index.php');
+?>

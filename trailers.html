@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #ffffff;
+            background-image: url('https://www.epicsound.com/blog/wp-content/uploads/2013/04/photodune-1625438-movies-film-blue-light-background-s.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container h1 {
+            color: #000000;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .movies {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .movie {
+            margin: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .movie h2 {
+            margin-bottom: 10px;
+            color: #000000;
+            font-size: 24px;
+        }
+
+        .movie img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .movie a {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .movie a:hover {
+            background-color: #F39C12;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #808080;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.php">Home</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="movies">
+            <div class="movie">
+                <h2>Black Adam</h2>
+                <img src="img/black.jpg" alt="Black Adam Image">
+                <a href="https://www.youtube.com/watch?v=mkomfZHG5q4" target="_blank">Watch Trailer</a>
+            </div>
+
+            <div class="movie">
+                <h2>Cherry</h2>
+                <img src="img/cherry.jpg" alt="Cherry Image">
+                <a href="https://www.youtube.com/watch?v=H5bH6O0bErk&t=5s" target="_blank">Watch Trailer</a>
+            </div>
+
+            <div class="movie">
+                <h2>The Invisible Man</h2>
+                <img src="img/tim.jpg" alt="The Invisible Man Image">
+                <a href="https://www.youtube.com/watch?v=WO_FJdiY9dA&t=4s" target="_blank">Watch Trailer</a>
+            </div>
+
+            <div class="movie">
+                <h2>Justice League</h2>
+                <img src="img/zsjl.jpg" alt="Justice League Image">
+                <a href="https://www.youtube.com/watch?v=3cxixDgHUYw" target="_blank">Watch Trailer</a>
+            </div>
+
+            <div class="movie">
+                <h2>Hypnotic</h2>
+                <img src="img/hypnotic.jpg" alt="Hypnotic Image">
+                <a href="https://www.youtube.com/watch?v=eHsWYmnXk1o" target="_blank">Watch Trailer</a>
+            </div>
+
+            <div class="movie">
+                <h2>Before I Wake</h2>
+                <img src="img/biw.jpg" alt="Before I Wake Image">
+                <a href="https://www.youtube.com/watch?v=_TFc9pprTLE" target="_blank">Watch Trailer</a>
+            </div>
+        <!-- Add more trailers here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Emtee Cinema Movies. All rights reserved.</p>
+    </footer>
+</body>
+</html>

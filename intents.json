@@ -1,0 +1,761 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Whats up"
+      ],
+      "responses": [
+        "Hello!",
+        "Good to see you again!",
+        "Hi there, how can I help?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "cya",
+        "See you later",
+        "Goodbye",
+        "I am Leaving",
+        "Have a Good day"
+      ],
+      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+      "context_set": ""
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "Sorry, can't understand you",
+        "Please give me more info",
+        "Not sure I understand"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "hotel_booking",
+      "patterns": [
+        "Book a hotel",
+        "Reserve a room",
+        "Hotel booking",
+        "Find accommodation",
+        "I need a place to stay"
+      ],
+      "responses": [
+        "Sure, I can help you with that. What city or location are you looking to book a hotel in?",
+        "Great choice! Could you please provide me with the city or destination where you'd like to book a hotel?",
+        "Certainly! Let me assist you with finding the perfect hotel. Where are you planning to stay?"
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "hotel_details",
+      "patterns": [
+        "Tell me about the hotel",
+        "What facilities does the hotel offer?",
+        "Can you describe the hotel?"
+      ],
+      "responses": [
+        "This hotel offers various amenities such as complimentary breakfast, free Wi-Fi, a fitness center, and a swimming pool.",
+        "The hotel features spacious rooms with modern furnishings, a 24-hour front desk, on-site dining options, and concierge services.",
+        "You'll enjoy your stay at this hotel, which boasts comfortable accommodations, a business center, laundry services, and a cozy lounge area."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "booking_process",
+      "patterns": [
+        "How do I book a room?",
+        "Walk me through the booking process",
+        "I'd like to make a reservation"
+      ],
+      "responses": [
+        "To book a room, simply provide your check-in and check-out dates, the number of guests, and any special requests you may have.",
+        "You can book a room by visiting our website, calling our reservation hotline, or using our mobile app.",
+        "Booking a room is easy! Just select your desired dates, room type, and any additional preferences, and complete the reservation process online."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "room_types",
+      "patterns": [
+        "What types of rooms are available?",
+        "Tell me about the room options",
+        "Room categories"
+      ],
+      "responses": [
+        "We offer a variety of room types, including standard rooms, suites, deluxe rooms, and executive suites with stunning views.",
+        "Choose from our selection of rooms, including single, double, twin, and family rooms to suit your accommodation needs.",
+        "Whether you prefer a cozy standard room or a luxurious suite, we have the perfect accommodation option for you."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "payment_options",
+      "patterns": [
+        "How can I pay for my reservation?",
+        "Payment methods accepted",
+        "What are the payment options?"
+      ],
+      "responses": [
+        "You can pay for your reservation using major credit cards, debit cards, or through online payment platforms.",
+        "We accept a variety of payment methods, including Visa, Mastercard, American Express, and bank transfers.",
+        "Rest assured, we offer secure payment options for your convenience, including online payment gateways and secure transactions."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hotel_location",
+      "patterns": [
+        "Where is the hotel located?",
+        "Can you give me directions to the hotel?",
+        "Hotel address"
+      ],
+      "responses": [
+        "The hotel is located at [hotel address]. You can easily find us using GPS navigation or by asking locals for directions.",
+        "Our hotel is conveniently situated in the heart of [city/location], close to popular attractions, shopping centers, and public transportation hubs.",
+        "You'll find our hotel nestled in a prime location with easy access to nearby landmarks, restaurants, and entertainment venues."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cancellation_policy",
+      "patterns": [
+        "What is the hotel's cancellation policy?",
+        "Can I cancel my reservation?",
+        "Cancellation terms"
+      ],
+      "responses": [
+        "Our cancellation policy allows free cancellation up to [number] days before your check-in date. After that, a cancellation fee may apply.",
+        "You can cancel your reservation without penalty up to [number] hours before your scheduled arrival. Please refer to your booking confirmation for detailed cancellation terms.",
+        "We understand that plans may change. You can cancel your reservation within [number] hours of booking for a full refund, subject to our cancellation policy."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "special_requests",
+      "patterns": [
+        "Can I make special requests for my stay?",
+        "Do you accommodate special needs?",
+        "Special accommodations"
+      ],
+      "responses": [
+        "Absolutely! We strive to make your stay comfortable and enjoyable. Please let us know if you have any special requests such as dietary restrictions, accessibility needs, or room preferences.",
+        "We're happy to accommodate special requests to ensure your stay meets your expectations. Whether it's a specific room location, extra amenities, or assistance with mobility, just let us know and we'll do our best to accommodate you.",
+        "Your comfort is our priority. Feel free to make any special requests regarding room preferences, amenities, or additional services, and we'll do our utmost to fulfill them."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "loyalty_program",
+      "patterns": [
+        "Do you have a loyalty program?",
+        "Tell me about your rewards program",
+        "Membership benefits"
+      ],
+      "responses": [
+        "Yes, we have a loyalty program that rewards you for your stays with exclusive perks, discounts, and member-only offers. Joining is free and easy!",
+        "Our loyalty program offers fantastic benefits such as free nights, room upgrades, late checkout, and special discounts on future bookings. Enroll today to start earning rewards!",
+        "Become a member of our loyalty program and enjoy a range of benefits, including points for every stay, redeemable rewards, and personalized offers tailored to your preferences."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "group_booking",
+      "patterns": [
+        "Can I book multiple rooms for a group?",
+        "Group reservations",
+        "Special rates for group bookings"
+      ],
+      "responses": [
+        "Certainly! We offer special rates and accommodations for group bookings. Contact our group reservations team for personalized assistance and discounted rates.",
+        "Planning a group trip? We're here to help! Contact our group reservations department to arrange multiple room bookings, special rates, and personalized services for your group.",
+        "Organizing a group event or gathering? Let us take care of the accommodations. Our group booking specialists will ensure a seamless booking experience and competitive rates for your group."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "amenities",
+      "patterns": [
+        "What amenities does the hotel offer?",
+        "List of hotel amenities",
+        "Facilities available at the hotel"
+      ],
+      "responses": [
+        "Our hotel offers a range of amenities including a fitness center, swimming pool, complimentary breakfast, and 24-hour room service.",
+        "Enjoy the convenience of our hotel amenities such as a business center, on-site restaurant, spa services, and free Wi-Fi throughout the property.",
+        "Relax and unwind with our hotel amenities including a sauna, jacuzzi, concierge service, and valet parking."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "check_in_out",
+      "patterns": [
+        "What are the check-in and check-out times?",
+        "Check-in/check-out procedures",
+        "When can I check in and check out?"
+      ],
+      "responses": [
+        "Check-in time is at [time] and check-out time is at [time]. Early check-in and late check-out options are available upon request, subject to availability.",
+        "Our standard check-in time is at [time], and check-out time is at [time]. Please let us know if you need to arrange for early check-in or late check-out.",
+        "You can check in starting from [time] and check out until [time]. We strive to accommodate early arrivals and late departures whenever possible."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pet_friendly",
+      "patterns": [
+        "Is the hotel pet-friendly?",
+        "Can I bring my pet?",
+        "Pet policy"
+      ],
+      "responses": [
+        "Yes, we're pet-friendly! You're welcome to bring your furry friend along for your stay. Please inform us in advance so we can make arrangements for your pet.",
+        "We understand that pets are family too! Our hotel warmly welcomes pets, so feel free to bring your furry companion along for a comfortable stay.",
+        "Your pet is welcome at our hotel! We offer pet-friendly accommodations and amenities to ensure both you and your pet have a pleasant stay with us."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "local_attractions",
+      "patterns": [
+        "What are the nearby attractions?",
+        "Things to do around the hotel",
+        "Local sightseeing recommendations"
+      ],
+      "responses": [
+        "Explore the nearby attractions such as museums, parks, and historical landmarks within walking distance from our hotel.",
+        "Discover the vibrant local scene with plenty of shopping, dining, and entertainment options just steps away from our hotel.",
+        "From cultural attractions to outdoor adventures, there's something for everyone near our hotel. Ask our concierge for recommendations and insider tips!"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "room_service",
+      "patterns": [
+        "Does the hotel offer room service?",
+        "Room service menu",
+        "How to order room service"
+      ],
+      "responses": [
+        "Yes, we offer 24-hour room service for your convenience. You can enjoy a delicious meal or snack in the comfort of your room anytime.",
+        "Indulge in our room service menu featuring a variety of culinary delights, from breakfast favorites to late-night snacks, delivered straight to your door.",
+        "Treat yourself to our room service options including gourmet dishes, refreshing beverages, and tempting desserts, available at your convenience."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "wifi_access",
+      "patterns": [
+        "Is Wi-Fi available at the hotel?",
+        "Wi-Fi access",
+        "Internet connection"
+      ],
+      "responses": [
+        "Yes, complimentary Wi-Fi is available throughout the hotel premises, so you can stay connected during your stay.",
+        "Stay connected with high-speed Wi-Fi access available in all guest rooms and public areas of the hotel.",
+        "Enjoy seamless internet connectivity with our complimentary Wi-Fi service, perfect for staying productive or keeping in touch with loved ones."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "business_travel",
+      "patterns": [
+        "Is the hotel suitable for business travelers?",
+        "Business amenities",
+        "Corporate rates"
+      ],
+      "responses": [
+        "Our hotel caters to the needs of business travelers with amenities such as a business center, meeting rooms, and complimentary Wi-Fi.",
+        "Stay productive during your business trip with our hotel's business-friendly amenities and services designed to meet your professional needs.",
+        "Experience a seamless business trip with our hotel's convenient location, executive accommodations, and business-friendly amenities."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "family_friendly",
+      "patterns": [
+        "Is the hotel suitable for families?",
+        "Family-friendly amenities",
+        "Kids stay free"
+      ],
+      "responses": [
+        "Our hotel welcomes families with kid-friendly amenities including a children's play area, family-sized accommodations, and special dining options for kids.",
+        "Create lasting memories with your family at our hotel, where we offer family-friendly amenities and activities for guests of all ages.",
+        "Make your family vacation unforgettable with our hotel's family-friendly facilities, from spacious rooms to fun-filled activities for kids."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "spa_services",
+      "patterns": [
+        "Does the hotel offer spa services?",
+        "Spa treatments",
+        "Relaxation services"
+      ],
+      "responses": [
+        "Indulge in a pampering spa experience with our range of rejuvenating treatments and massages available at the hotel's spa.",
+        "Treat yourself to a day of relaxation and renewal with our luxurious spa services, including massages, facials, and body treatments.",
+        "Unwind and rejuvenate with our spa services designed to soothe your body, mind, and spirit, leaving you feeling refreshed and revitalized."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "events_space",
+      "patterns": [
+        "Does the hotel have event spaces?",
+        "Meeting rooms",
+        "Event venues"
+      ],
+      "responses": [
+        "Yes, our hotel offers versatile event spaces including meeting rooms, banquet halls, and conference facilities, perfect for hosting corporate events, weddings, and social gatherings.",
+        "Plan your next event with us! Our hotel provides state-of-the-art meeting rooms and event venues equipped with modern amenities and professional support services.",
+        "Host successful events and conferences at our hotel's spacious meeting rooms and event spaces, tailored to meet your specific requirements and preferences."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "parking_facilities",
+      "patterns": [
+        "Is parking available at the hotel?",
+        "Parking options",
+        "Valet service"
+      ],
+      "responses": [
+        "Yes, we offer convenient parking facilities for our guests, including self-parking and valet service options.",
+        "Rest assured, your vehicle is in safe hands with our secure parking facilities and professional valet service available at the hotel.",
+        "Enjoy hassle-free parking during your stay with our hotel's convenient parking facilities and valet service, providing you with added convenience and peace of mind."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "airport_shuttle",
+      "patterns": [
+        "Does the hotel provide airport shuttle service?",
+        "Transportation options",
+        "Airport transfer"
+      ],
+      "responses": [
+        "Yes, we offer airport shuttle service for our guests' convenience. Please inquire about our shuttle schedule and reservation process.",
+        "Let us take care of your transportation needs with our reliable airport shuttle service, ensuring a seamless transition to and from the airport.",
+        "Arrive at your destination stress-free with our hotel's convenient airport shuttle service, providing comfortable and efficient transportation for our guests."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "concierge_services",
+      "patterns": [
+        "What services does the hotel's concierge offer?",
+        "Concierge assistance",
+        "Local recommendations"
+      ],
+      "responses": [
+        "Our concierge is available to assist you with arranging restaurant reservations, booking tours and excursions, obtaining tickets to local attractions, and providing insider tips on the best places to visit.",
+        "Experience personalized service with our hotel's concierge team, who are dedicated to ensuring your stay is memorable and hassle-free.",
+        "Leave the details to us! Our concierge is at your service to fulfill your requests and provide recommendations to enhance your stay."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "room_upgrades",
+      "patterns": [
+        "Can I request a room upgrade?",
+        "Upgrade options",
+        "Upgrade availability"
+      ],
+      "responses": [
+        "Room upgrades may be available upon request and subject to availability. Please inquire at the front desk for upgrade options during check-in.",
+        "Enhance your stay with a room upgrade! Contact our front desk staff to inquire about available upgrade options and pricing.",
+        "Experience the ultimate in comfort and luxury with a room upgrade. Ask our front desk staff about upgrade options to make your stay even more memorable."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "fitness_facilities",
+      "patterns": [
+        "Are there fitness facilities at the hotel?",
+        "Gym access",
+        "Fitness center hours"
+      ],
+      "responses": [
+        "Stay active during your stay with our hotel's fitness facilities, including a fully-equipped gym and exercise classes available for guests.",
+        "Maintain your workout routine with 24-hour access to our hotel's fitness center, featuring state-of-the-art equipment and amenities.",
+        "Start your day with a workout at our hotel's fitness center, equipped with cardio machines, free weights, and more to keep you in shape during your stay."
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "room_availability",
+      "patterns": [
+        "Is there availability for [specific date]?",
+        "Check room availability",
+        "Availability for my dates"
+      ],
+      "responses": [
+        "Let me check the availability for you. Please provide your check-in and check-out dates.",
+        "I can assist you with checking the availability for your desired dates. When do you plan to check in and check out?",
+        "Sure, I'll help you find available rooms. Could you please provide the dates you're interested in?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pricing_information",
+      "patterns": [
+        "What are the room rates?",
+        "Room pricing details",
+        "Cost per night"
+      ],
+      "responses": [
+        "Room rates may vary depending on factors such as room type, season, and availability. Let me provide you with the current pricing information.",
+        "I can provide you with the room rates for your desired dates. Please specify the room type and any preferences you may have.",
+        "Our room rates are competitive and based on factors such as room category, occupancy, and length of stay. Let me fetch the pricing information for you."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "booking_confirmation",
+      "patterns": [
+        "How do I receive my booking confirmation?",
+        "Confirmation email",
+        "Booking confirmation process"
+      ],
+      "responses": [
+        "Once your booking is confirmed, you'll receive a confirmation email containing your reservation details and booking reference number.",
+        "You'll receive a confirmation email shortly after completing your booking, providing you with all the necessary details for your stay.",
+        "Your booking confirmation will be sent to the email address provided during the booking process. Please check your inbox for the confirmation email."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "early_check_in",
+      "patterns": [
+        "Can I request early check-in?",
+        "Early arrival",
+        "Arriving before check-in time"
+      ],
+      "responses": [
+        "Early check-in requests are subject to availability and may incur an additional fee. Please let us know your estimated arrival time so we can accommodate your request.",
+        "We'll do our best to accommodate your early check-in request, subject to room availability. Please inform us of your arrival time in advance.",
+        "Early check-in may be available upon request, but it's subject to room availability. Please let us know if you need to check in earlier than the standard check-in time."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "late_check_out",
+      "patterns": [
+        "Can I request late check-out?",
+        "Late departure",
+        "Checking out after standard time"
+      ],
+      "responses": [
+        "Late check-out requests are subject to availability and may be accommodated for an additional fee. Please inform us of your desired check-out time in advance.",
+        "We'll do our best to accommodate your late check-out request, subject to availability. Please let us know your preferred check-out time.",
+        "Late check-out options may be available upon request, depending on room availability. Please inform us of your departure time so we can make the necessary arrangements."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "special_occasions",
+      "patterns": [
+        "Do you offer special packages for occasions?",
+        "Celebrating a special event",
+        "Romantic getaway packages"
+      ],
+      "responses": [
+        "Yes, we offer special packages for occasions such as anniversaries, birthdays, and romantic getaways. Let me provide you with more information on our available packages.",
+        "Celebrate your special occasion with one of our customized packages, featuring romantic amenities, special touches, and memorable experiences.",
+        "Make your special occasion unforgettable with our exclusive packages tailored to suit your needs and preferences. Let us help you create lasting memories."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "room_preferences",
+      "patterns": [
+        "Can I request specific room preferences?",
+        "Room preferences",
+        "Preferred room type"
+      ],
+      "responses": [
+        "Yes, you can request specific room preferences such as a high floor, non-smoking room, or a room with a view. Please let us know your preferences during the booking process.",
+        "We'll do our best to accommodate your room preferences, including bedding configuration, view, and accessibility options. Please specify your preferences when making your reservation.",
+        "Your comfort is important to us. Please let us know your room preferences, and we'll make every effort to fulfill your requests based on availability."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "in_room_amenities",
+      "patterns": [
+        "What amenities are available in the room?",
+        "In-room facilities",
+        "Room amenities list"
+      ],
+      "responses": [
+        "Our rooms are equipped with amenities such as a flat-screen TV, minibar, coffee maker, and complimentary toiletries for your convenience.",
+        "Enjoy a comfortable stay with in-room amenities including plush bedding, a work desk, ironing facilities, and a hairdryer.",
+        "Relax and unwind in your room with amenities such as a cozy bathrobe, slippers, and a selection of premium bath products."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "room_cleaning",
+      "patterns": [
+        "How often are the rooms cleaned?",
+        "Housekeeping services",
+        "Room cleaning schedule"
+      ],
+      "responses": [
+        "Our housekeeping team cleans and sanitizes the rooms daily to ensure a comfortable and hygienic stay for our guests.",
+        "Your comfort is our priority. Our housekeeping staff cleans the rooms daily and provides fresh linens and towels as needed during your stay.",
+        "Rest assured, our housekeeping team maintains high standards of cleanliness and hygiene throughout the hotel, including regular cleaning and sanitization of guest rooms."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "lost_and_found",
+      "patterns": [
+        "What should I do if I lost something in the hotel?",
+        "Lost and found procedure",
+        "Retrieve lost items"
+      ],
+      "responses": [
+        "If you've lost something during your stay, please contact our front desk or housekeeping department for assistance in locating your lost item.",
+        "Our lost and found department is dedicated to assisting guests in retrieving lost items. Please provide us with a detailed description of the lost item, and we'll do our best to locate it for you.",
+        "Lost something during your stay? Don't worry, we're here to help. Please report any lost items to our staff, and we'll make every effort to reunite you with your belongings."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "local_transportation",
+      "patterns": [
+        "What transportation options are available nearby?",
+        "Getting around the area",
+        "Local transportation services"
+      ],
+      "responses": [
+        "There are several transportation options available nearby, including taxis, ride-sharing services, public buses, and subway stations within walking distance from the hotel.",
+        "Explore the area with ease using local transportation services such as buses, trains, and taxis, all conveniently located near the hotel.",
+        "Getting around is easy with various transportation options available nearby, including rental car services, bike rentals, and public transportation stops."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "language_support",
+      "patterns": [
+        "Is multilingual staff available at the hotel?",
+        "Language assistance",
+        "Staff languages spoken"
+      ],
+      "responses": [
+        "Yes, our staff members are multilingual and can assist you in several languages. Please let us know your language preference, and we'll ensure you receive the assistance you need.",
+        "Our friendly staff members are fluent in multiple languages to cater to the needs of our diverse guests. Feel free to communicate with us in your preferred language.",
+        "Language should not be a barrier to excellent service. Our staff members are proficient in multiple languages to ensure effective communication and assistance for all guests."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "guest_feedback",
+      "patterns": [
+        "How can I provide feedback about my stay?",
+        "Guest satisfaction survey",
+        "Leave a review"
+      ],
+      "responses": [
+        "We value your feedback! You can provide feedback about your stay by completing our guest satisfaction survey, which you'll receive via email after check-out.",
+        "Your feedback is important to us. You can leave a review of your stay on our website or on popular review platforms such as TripAdvisor or Google.",
+        "We strive to continuously improve our services based on guest feedback. Please feel free to share your thoughts and suggestions about your stay with us."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "babysitting_services",
+      "patterns": [
+        "Does the hotel offer babysitting services?",
+        "Childcare options",
+        "Babysitting service availability"
+      ],
+      "responses": [
+        "Yes, we offer babysitting services for our guests' convenience. Our trained babysitters provide attentive care and engaging activities for children of all ages.",
+        "Enjoy peace of mind knowing your little ones are in good hands with our reliable babysitting services available upon request.",
+        "Take some time for yourself while our experienced babysitters take care of your children with personalized attention and fun activities."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "accessible_rooms",
+      "patterns": [
+        "Are accessible rooms available at the hotel?",
+        "ADA-compliant accommodations",
+        "Wheelchair-accessible rooms"
+      ],
+      "responses": [
+        "Yes, we offer accessible rooms designed to meet the needs of guests with disabilities. These rooms feature amenities such as wider doorways, grab bars, and roll-in showers.",
+        "Our hotel is committed to accessibility and offers ADA-compliant accommodations for guests with special needs. Please let us know your requirements when making your reservation.",
+        "Accessible rooms are available to ensure all guests have a comfortable stay. These rooms are equipped with features such as wheelchair-accessible doorways, grab bars, and accessible bathrooms."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "business_center",
+      "patterns": [
+        "Does the hotel have a business center?",
+        "Business services",
+        "Office facilities"
+      ],
+      "responses": [
+        "Yes, we have a fully-equipped business center with computers, printers, and meeting rooms available for guests' use.",
+        "Stay productive during your stay with our hotel's business center, offering a range of amenities and services for business travelers.",
+        "Our business center provides everything you need to stay connected and productive, including high-speed internet access, printing services, and meeting facilities."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "laundry_services",
+      "patterns": [
+        "Does the hotel offer laundry services?",
+        "Laundry facilities",
+        "Dry cleaning options"
+      ],
+      "responses": [
+        "Yes, we offer laundry services including dry cleaning, washing, and ironing for your convenience.",
+        "Leave your laundry worries behind with our hotel's laundry services, providing efficient and reliable cleaning solutions during your stay.",
+        "Keep your clothes fresh and clean with our convenient laundry services, including same-day dry cleaning and express laundry service."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "in_room_dining",
+      "patterns": [
+        "Is in-room dining available?",
+        "Room service menu",
+        "Ordering food to the room"
+      ],
+      "responses": [
+        "Yes, we offer in-room dining services with a diverse menu of delicious meals and snacks delivered to your door.",
+        "Indulge in the convenience of in-room dining with our extensive menu featuring a variety of cuisines and dishes for every palate.",
+        "Enjoy a gourmet dining experience in the comfort of your room with our in-room dining service, available 24 hours a day."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "security_measures",
+      "patterns": [
+        "What security measures does the hotel have?",
+        "Safety precautions",
+        "Hotel security protocols"
+      ],
+      "responses": [
+        "Your safety is our top priority. We have security measures in place including CCTV surveillance, electronic key card access, and security personnel on-site.",
+        "Rest assured, our hotel implements rigorous security measures to ensure the safety and well-being of our guests, staff, and property.",
+        "We take security seriously and have implemented various measures such as 24-hour security patrols, secure parking facilities, and emergency response protocols."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "pet_policy",
+      "patterns": [
+        "Does the hotel allow pets?",
+        "Pet-friendly accommodations",
+        "Bringing pets to the hotel"
+      ],
+      "responses": [
+        "Yes, we welcome furry friends at our pet-friendly hotel. Please inform us in advance if you'll be bringing your pet so we can prepare for their arrival.",
+        "Your four-legged companion is welcome at our pet-friendly hotel. We offer designated pet-friendly rooms and amenities to ensure a comfortable stay for both you and your pet.",
+        "Don't leave your furry friend behind! Bring them along for a pet-friendly stay at our hotel, where we provide amenities and services tailored to pets' needs."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "local_events",
+      "patterns": [
+        "Are there any local events happening during my stay?",
+        "Events in the area",
+        "Local festivals and celebrations"
+      ],
+      "responses": [
+        "Experience the local culture and festivities with events happening near our hotel. Our staff can provide you with information about upcoming events and festivals.",
+        "Immerse yourself in the local scene with events such as festivals, concerts, and cultural celebrations happening nearby during your stay.",
+        "Explore the vibrant local scene with events and activities happening in the area. Our staff can recommend upcoming events and provide assistance with tickets and reservations."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hiking_trails",
+      "patterns": [
+        "Are there hiking trails near the hotel?",
+        "Outdoor activities",
+        "Nature trails"
+      ],
+      "responses": [
+        "Yes, there are hiking trails near the hotel where you can explore the natural beauty of the area. Our staff can provide you with information about nearby trails and hiking routes.",
+        "Embark on an outdoor adventure with hiking trails located near the hotel, offering scenic views and opportunities to connect with nature.",
+        "Explore the great outdoors with hiking trails accessible from the hotel, perfect for nature lovers and outdoor enthusiasts."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "local_attractions",
+      "patterns": [
+        "What attractions are near the hotel?",
+        "Nearby points of interest",
+        "Sightseeing recommendations"
+      ],
+      "responses": [
+        "Discover popular attractions and landmarks near the hotel, including museums, historic sites, shopping districts, and more. Our staff can provide recommendations for sightseeing and exploring the area.",
+        "There are plenty of attractions to explore near the hotel, from iconic landmarks to hidden gems waiting to be discovered. Let us help you plan your itinerary with recommendations for nearby attractions.",
+        "Immerse yourself in the local culture and attractions near the hotel, with plenty of options for sightseeing, shopping, dining, and entertainment within easy reach."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "local_cuisine",
+      "patterns": [
+        "What local cuisine can I try nearby?",
+        "Local dining recommendations",
+        "Authentic food experiences"
+      ],
+      "responses": [
+        "Indulge in the flavors of the region with local cuisine options available near the hotel. Our staff can recommend restaurants and eateries known for their authentic dishes and culinary delights.",
+        "Experience the local food scene with a variety of dining options available nearby, from street food stalls to fine dining restaurants serving authentic regional cuisine.",
+        "Savor the tastes of the destination with local dining recommendations from our staff, who can point you towards the best spots for sampling authentic dishes and culinary specialties."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "cultural_activities",
+      "patterns": [
+        "Are there any cultural activities I can participate in?",
+        "Cultural experiences",
+        "Local traditions and customs"
+      ],
+      "responses": [
+        "Immerse yourself in the local culture with cultural activities such as traditional performances, craft workshops, and cultural tours available near the hotel.",
+        "Experience the rich heritage and traditions of the destination with cultural activities such as dance performances, cooking classes, and art exhibitions happening in the area.",
+        "Discover the cultural treasures of the destination with activities that offer insights into local traditions, customs, and way of life. Let us help you plan cultural experiences during your stay."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "emergency_procedures",
+      "patterns": [
+        "What are the hotel's emergency procedures?",
+        "Emergency contact information",
+        "Safety protocols"
+      ],
+      "responses": [
+        "Your safety is our priority. In the event of an emergency, please follow the instructions provided in your room and contact the front desk for assistance.",
+        "We have established emergency procedures to ensure the safety and well-being of our guests. Please familiarize yourself with the emergency exits and procedures outlined in your room.",
+        "Rest assured, we have comprehensive safety protocols and emergency procedures in place to respond promptly and effectively to any situation that may arise during your stay."
+      ],
+      "context_set": ""
+    }
+  ]
+}
